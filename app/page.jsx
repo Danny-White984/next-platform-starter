@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Page() {
     return (
         <div className="flex flex-col gap-12 sm:gap-16">
@@ -11,21 +13,27 @@ export default function Page() {
             </section>
 
             <section className="grid gap-6 sm:grid-cols-2">
-                <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl p-8 text-center shadow-lg">
-                    <div className="text-6xl mb-4">🍜</div>
-                    <h2 className="text-white mb-4">Unlimited Free Ramen!</h2>
-                    <p className="text-orange-100 text-lg">
-                        That's right — enjoy as much delicious ramen as you want, completely free!
-                    </p>
-                </div>
+                <Link href="/claim/free-ramen" className="block">
+                    <div className="bg-gradient-to-br from-orange-500 to-red-600 rounded-xl p-8 text-center shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-200 cursor-pointer">
+                        <div className="text-6xl mb-4">🍜</div>
+                        <h2 className="text-white mb-4">Unlimited Free Ramen!</h2>
+                        <p className="text-orange-100 text-lg">
+                            That's right — enjoy as much delicious ramen as you want, completely free!
+                        </p>
+                        <p className="text-white/80 text-sm mt-4 font-medium">Click to claim →</p>
+                    </div>
+                </Link>
 
-                <div className="bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl p-8 text-center shadow-lg">
-                    <div className="text-6xl mb-4">🎁</div>
-                    <h2 className="text-white mb-4">One Free Thing at the GA!</h2>
-                    <p className="text-purple-100 text-lg">
-                        Stop by and claim your free item — on the house!
-                    </p>
-                </div>
+                <Link href="/claim/ga" className="block">
+                    <div className="bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl p-8 text-center shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-200 cursor-pointer">
+                        <div className="text-6xl mb-4">🎁</div>
+                        <h2 className="text-white mb-4">One Free Thing at the GA!</h2>
+                        <p className="text-purple-100 text-lg">
+                            Stop by and claim your free item — on the house!
+                        </p>
+                        <p className="text-white/80 text-sm mt-4 font-medium">Click to claim →</p>
+                    </div>
+                </Link>
             </section>
 
             <section className="bg-neutral-800/50 rounded-xl p-8 text-center">
